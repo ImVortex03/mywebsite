@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio d'Artiste</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .about, .gallery, .contact {
+            margin-bottom: 40px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nom de l'Artiste</h1>
+    </header>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>À propos</h2>
+            <p>Présentation de l'artiste. Parlez de votre parcours, de votre inspiration et de votre style artistique.</p>
+        </section>
+        <section id="gallery" class="gallery">
+            <h2>Galerie</h2>
+            <!-- Ajoutez des images de vos œuvres ici -->
+            <img src="image1.jpg" alt="Oeuvre 1">
+            <img src="image2.jpg" alt="Oeuvre 2">
+            <img src="image3.jpg" alt="Oeuvre 3">
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Vous pouvez me contacter à l'adresse email suivante : artiste@example.com</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Nom de l'Artiste. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
