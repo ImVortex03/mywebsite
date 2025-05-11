@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directeur artistique | Yohan Montocchio | Lyon et Maurice</title>
+
+    <!-- Importation des polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="Logo YM blanc.png" alt="Yohan Montocchio" />
+        </a>
+
+        <!-- Menu de navigation -->
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#qui-je-suis">Qui je suis</a></li>
+            <li><a href="projets.html">Mes projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="video-wrapper">
+                <video autoplay muted loop playsinline class="background-video"
+                    aria-label="Vidéo de fond montrant l'esthétique du studio">
+                    <source src="videos/humbanvideo2.mp4" type="video/mp4" />
+                    Votre navigateur ne supporte pas les vidéos.
+                </video>
+            </div>
+            <div class="content">
+                <!-- Bandeau défilant avec plusieurs répétitions du texte -->
+                <div class="scrolling-banner-wrapper">
+                    <div class="scrolling-banner">
+                        <span>YOHAN MONTOCCHIO</span>
+                        <span>YOHAN MONTOCCHIO</span>
+                        <span>YOHAN MONTOCCHIO</span>
+                        <span>YOHAN MONTOCCHIO</span>
+                        <!-- Ajouter autant que nécessaire -->
+                    </div>
+                </div>
+                <p class="tagline">Graphic designer, Illustrator, <br /> &<span class="italic">
+                        Multi-disciplinary</span><br />Artistic director based in Lyon.</p>
+                <!-- Ajout de la flèche -->
+                <span class="down-arrow">&#8595;</span>
+            </div>
+        </header>
+
+        <!-- Section après le Hero -->
+        <section class="intro-home light-background" id="qui-je-suis">
+            <div class="container">
+                <h2>Vous me découvrez ?</h2>
+                <p>Je m'appelle <span class="corpsvariante">Yohan Montocchio</span>, et je suis <span
+                        class="corpsvariante">directeur
+                        artistique.</span> <br /> <br />Depuis toujours plongé dans le design graphique et les arts
+                    visuels, j'ai décidé il y a <span class="corpsvariante">4 ans</span> d'en faire mon métier.
+                    <br /><br />On a tendance à dire que mon art est <span class="corpsvariante">authentique</span>,
+                    <span class="corpsvariante">original</span> et <span class="corpsvariante">plein de sens</span>.
+                </p>
+            </div>
+            <div class="sticker1">
+                <img src="images/stickers/stickercrocosvg.svg" alt="Sticker AHOY !">
+            </div>
+            <div class="sticker2">
+                <img src="images/stickers/stickercroco2.svg" alt="Sticker crocodile !">
+            </div>
+            <div class="portrait-stack">
+                <div class="hidden-message">👀 Coucou !</div>
+                <img src="images/moi.jpeg" alt="Moi 1" class="photo photo-1">
+                <img src="images/moi2.jpeg" alt="Moi 2" class="photo photo-2">
+                <img src="images/moi3.jpeg" alt="Moi 3" class="photo photo-3">
+            </div>
+        </section>
+
+        <section class="dynamic-text">
+            <p>
+                Crafting
+                <span class="word-container italic"><span class="word" id="word1">fabulous</span></span>
+                art with
+                <span class="word-container italic"><span class="word" id="word2">passion</span></span>
+                </br>
+                for
+                <span class="word-container italic"><span class="word" id="word3">my clients</span></span>.
+            </p>
+        </section>
+
+        <section class="contact-reminder light-background">
+            <div class="container">
+                <h3>Un projet en tête ?</h3>
+                <p>Discutons-en autour d’un café ☕</p>
+                <a href="contact.html" class="btn-contact">Me contacter</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 – Yohan Montocchio • <span class="italic">Have a good day ☀️</span></p>
+    </footer>
+
+    <!-- Flèche vers le haut -->
+    <div class="scroll-to-top">
+        <span>&#8593;</span>
+    </div>
+
+</body>
+
+<script src="scripts.js" defer></script>
+
+</html>

@@ -1,0 +1,795 @@
+/* Global styles */
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  background-color: #000000; /* Fond clair */
+  color: #616161; /* Texte sombre */
+  transition: opacity 0.5s ease-in-out;
+  cursor: default;
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0);
+}
+
+.navbar .logo img {
+  width: 150px;
+  transition: 0.4s ease, filter 0.4s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 75px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-family: "Unbounded", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 100;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6600; /* Couleur hover */
+}
+
+.hero {
+  position: relative;
+  height: 130vh; /* Hauteur de l'élément hero */
+  overflow: visible;
+}
+
+.hero p {
+  font-family: "Unbounded", serif; /* Correct pour Playfair Display si nécessaire */
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  color: #ffffff;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recadre la vidéo */
+  object-position: center; /* Centre la vidéo */
+}
+
+.content {
+  position: absolute; /* Positionnement absolu par rapport au parent */
+  top: 15%; /* Commence à une hauteur de 20% */
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: white;
+  text-align: left;
+  padding: 0 20px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  transition: transform 0.3s ease-in-out; /* Transition fluide */
+  mix-blend-mode: difference;
+  pointer-events: none; /* Empêche le texte d'interférer avec le scroll */
+}
+
+.italic {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #fff;
+}
+
+.tagline {
+  text-align: left;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.hero video {
+  object-position: center 20%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+/* Bandeau défilant */
+.scrolling-banner {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px 0;
+}
+
+.scrolling-banner span {
+  font-size: 4rem;
+  color: white;
+  margin-right: 20px;
+  animation: scroll-text 7s linear infinite;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(3%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.down-arrow {
+  display: block;
+  font-size: 2rem;
+  color: white;
+  margin-top: 20px;
+  align-self: center;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.a-propos,
+.projets,
+.contact {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.a-propos h2,
+.projets h2,
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6600;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.carte {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex: 1 1 200px;
+  max-width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: #000000;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.grille-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 2px;
+  background-color: white;
+}
+
+.grille-projets a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+.grille-projets a .projet {
+  height: 100%;
+  width: 100%;
+}
+
+.projet {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  background-color: transparent;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.projet:not(.active) {
+  background-color: transparent !important; /* Assurer un fond transparent même quand ils disparaissent */
+}
+
+.projet.hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.projet video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projet .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projet .overlay {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
+}
+
+.projet:hover .overlay {
+  opacity: 1;
+}
+
+.projets-page {
+  background-color: #000000;
+  color: white;
+}
+
+/* Cas spéciaux : projets plus larges ou hauts */
+.projet.large {
+  grid-column: span 2;
+}
+
+.projet.tall {
+  grid-row: span 2;
+}
+
+.projet.large.tall {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.projet.vide {
+  background-color: #111111;
+}
+
+.projet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.filtres {
+  position: relative;
+  top: 20%; /* Ajuste cette valeur selon la hauteur de ta navbar */
+  left: 0;
+  width: 100%;
+  background: transparent;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Style de base des boutons de filtre */
+.filtres button {
+  background-color: transparent; /* Pas de fond */
+  color: white; /* Texte blanc */
+  border: 2px solid white; /* Contour blanc */
+  padding: 10px 20px; /* Espacement interne */
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Unbounded", sans-serif;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease; /* Transition fluide pour les changements */
+}
+
+.filtres button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.345
+  ); /* Légère couleur de fond lors du survol */
+}
+
+.filtres button.active {
+  background-color: white; /* Fond blanc pour le bouton actif */
+  color: black; /* Texte noir pour le bouton actif */
+  border: 2px solid rgb(255, 255, 255); /* Bordure noire pour le bouton actif */
+}
+/* Style pour la page "Qui je suis" */
+.about {
+  background-color: #000000;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #a1a1a1;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.nav-links li a.active {
+  color: #ff6600; /* ou une autre couleur distinctive */
+}
+
+.intro-home {
+  background-color: #fdfdfd;
+  color: #000000;
+  position: relative;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.intro-home h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.intro-home p {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.hero-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.hero-gif img {
+  width: 120px; /* adapte selon la taille de ton gif */
+  height: auto;
+}
+
+.sticker1 {
+  position: absolute;
+  top: 4%; /* Ajuste verticalement si besoin */
+  left: 70%; /* Plus à droite qu’au centre */
+  transform: translate(-50%, -50%) rotate(15deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sticker1 img {
+  width: 250px; /* Ajuste la taille du sticker */
+  height: auto;
+}
+
+.sticker2 {
+  position: absolute;
+  top: 107%; /* Ajuste verticalement si besoin */
+  left: 24%; /* Plus à droite qu’au centre */
+  transform: translate(-50%, -50%) rotate(-20deg);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sticker2 img {
+  width: 300px; /* Ajuste la taille du sticker */
+  height: auto;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+}
+
+.scroll-to-top:hover {
+  background-color: white;
+  color: black;
+}
+
+.scroll-to-top.black {
+  color: black;
+  border-color: black;
+}
+
+.scroll-to-top.black:hover {
+  background-color: black;
+  color: white;
+}
+
+.corpsvariante {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+.portrait-stack {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 2rem auto;
+  cursor: pointer;
+}
+
+.portrait-stack .photo {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+/* Positionnement initial */
+.photo-1 {
+  top: 0;
+  left: 0;
+  transform: rotate(-5deg);
+  z-index: 1;
+}
+.photo-2 {
+  top: 20px;
+  left: 15px;
+  transform: rotate(8deg);
+  z-index: 2;
+}
+.photo-3 {
+  top: 40px;
+  left: 30px;
+  transform: rotate(-10deg);
+  z-index: 3;
+}
+
+/* Le contenu caché */
+.hidden-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+/* Effet au hover */
+.portrait-stack:hover .photo-1 {
+  transform: translateX(-260px) rotate(-15deg);
+}
+.portrait-stack:hover .photo-2 {
+  transform: translateX(-18px) rotate(0deg);
+}
+.portrait-stack:hover .photo-3 {
+  transform: translateX(240px) translateY(-30px) rotate(15deg);
+}
+
+.portrait-stack:hover .hidden-message {
+  opacity: 1;
+}
+
+/* Style par défaut sur fond sombre */
+.navbar .nav-links a {
+  color: white;
+}
+
+/* Quand fond clair détecté */
+.navbar-light .nav-links a {
+  color: black;
+}
+
+.navbar-light .nav-links a:hover {
+  color: #555;
+}
+
+.navbar-light .logo img {
+  filter: invert(1); /* optionnel si le logo est blanc et doit devenir noir */
+}
+
+.dynamic-text {
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 2.5rem 1rem;
+  line-height: 1.4;
+  padding: none;
+}
+
+.dynamic-text p {
+  font-family: "Unbounded";
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.word-container {
+  display: inline-block;
+  position: relative;
+}
+
+.word {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Transition de disparition et apparition des mots */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* === Section Contact === */
+
+.contact-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  background-color: #000; /* reste dans l'identité visuelle */
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.contact-section .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  color: #bdbdbd;
+}
+
+.contact-section .email-highlight {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  font-family: "Unbounded", sans-serif;
+  color: #ff6600;
+  word-break: break-word;
+}
+
+.contact-section a {
+  text-decoration: underline;
+  color: #ff6600;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: 0.5s ease;
+}
+
+.socials a:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+.socials img {
+  display: inline-block;
+}
+
+.contact-section {
+  padding-top: 10%;
+}
+
+.contact-reminder {
+  background-color: #f9f9f9; /* Fond clair */
+  color: #111; /* Texte foncé */
+  text-align: center;
+  padding: 4rem 1rem;
+  margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-reminder .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-reminder h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+  color: #111;
+}
+
+.contact-reminder p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: #333;
+}
+
+.btn-contact {
+  display: inline-block;
+  background-color: #ff6a00; /* Orange flashy */
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #e95d00;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .scrolling-banner span {
+    font-size: 2rem;
+  }
+
+  .carte {
+    max-width: 100%;
+  }
+
+  .grille-projets {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projets | Yohan Montocchio</title>
+    <!-- Importation des polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Flèche vers le haut -->
+<div class="scroll-to-top">
+    <span>&#8593;</span>
+</div>
+
+<body class="projets-page">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="Logo YM blanc.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#qui-je-suis">Qui je suis</a></li>
+            <li><a href="projets.html" class="active">Mes projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main style="margin-top: 100px;">
+        <div class="filtres">
+            <button class="filter-button active" data-filter="all">Tous</button>
+            <button class="filter-button" data-filter="motion">Motion Design</button>
+            <button class="filter-button" data-filter="branding">Branding</button>
+            <button class="filter-button" data-filter="communication">Communication</button>
+        </div>
+        <section class="grille-projets">
+            <div class="projet large tall branding">
+                <a href="https://www.behance.net/gallery/199346619/HUMBAN-Molinard" target="_blank">
+                    <video src="videos/humbanvideo.mp4" autoplay muted loop></video>
+                    <div class="overlay">
+                        <h3>Humban</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="projet large motion">
+                <a href="https://www.behance.net/gallery/212199943/300-Motion-Design" target="_blank">
+                    <video src="videos/300video.mp4" autoplay muted loop></video>
+                    <div class="overlay">
+                        <h3>300</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="projet large tall motion">
+                <a href="https://www.behance.net/gallery/199334799/Opening-Credits-Joker-(2019)" target="_blank">
+                    <video src="videos/jokervideo.mp4" autoplay muted loop></video>
+                    <div class="overlay">
+                        <h3>Joker</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="projet large illustration">
+                <video src="gifs/tarotvideo.mp4" autoplay muted loop></video>
+                <div class="overlay">
+                    <h3>Tarot cards</h3>
+                </div>
+            </div>
+            <div class="projet large tall branding illustration communication">
+                <a href="https://www.behance.net/gallery/203894985/Meraviglia-Album-Cover" target="_blank">
+                    <video src="videos/meravigliavideo.mp4" autoplay muted loop></video>
+                    <div class="overlay">
+                        <h3>Meraviglia</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="projet large motion illustration">
+                <video src="videos/fdlvideo.mp4" autoplay muted loop></video>
+                <div class="overlay">
+                    <h3>Fete des Lumières 2025</h3>
+                </div>
+            </div>
+            <!-- Ajoute d'autres projets ici -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 – Yohan Montocchio • <span class="italic">Have a good day ☀️</span></p>
+    </footer>
+
+</body>
+
+<!-- JavaScript -->
+<script src="scripts.js" defer></script> <!-- Inclusion du fichier JavaScript global -->
+
+</html>
